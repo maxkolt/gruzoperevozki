@@ -11,11 +11,17 @@
 </head>
 <body>
 <header>
+    <!--  TODO: <section + <div лишние. Запихни классы в header.
+            Классы (container + header_section)  объеденить в 1 класс?
+                *Это не точно -->
     <section class="container">
         <div class="header_section">
             <img class="logo_img" src="img/logo.png" alt="logo"/>
             <nav>
                 <ul class="nav_section">
+                    <!--  TODO: класс class="nav" повторяется часто
+                            Есть принцип DRY: https://ruseller.com/lessons.php?rub=28&id=615
+                                чтобы не повторяться сделай селектор (nav_section > li) -->
                     <li><a class="nav" href="">home</a></li>
                     <li><a class="nav" href="">about</a></li>
                     <li><a class="nav" href="">work</a></li>
@@ -30,18 +36,30 @@
 </header>
 <main>
     <section class="banner">
+        <!--  TODO: 2 <div лишние. Запихни классы в section?
+                 Классы (banner + container + banner_content) объеденить в 1 класс? -->
         <div class="container">
             <div class="banner_content">
+                <!--TODO: сделать класс title не только для баннера, а для всего сайта, чтобы переиспользовать
+                         banner_title -переименуй title -->
                 <h1 class="banner_title">We Design and Develop</h1>
+                <!--TODO: сделать класс title не только для баннера, а для всего сайта, чтобы переиспользовать
+                       banner_text -переименуй text -->
                 <h3 class="banner_text">We are a new design studio based in USA. We have over <br>
                     20 years of combined experience, and know a thing or two <br>
                     about designing websites and mobile apps.</h3>
+                <!--TODO: сделать класс кнопки не только для баннера, а для всего сайта, чтобы переиспользовать
+                     banner_btn -переименуй btn -->
                 <button class="banner_btn">contact us</button>
             </div>
         </div>
     </section>
     <section class="about">
+        <!--TODO: сделать класс title не только для баннера, а для всего сайта, чтобы переиспользовать
+                     about_title -переименуй title -->
         <h2 class="about_title">About Us</h2>
+        <!--TODO: сделать класс title не только для баннера, а для всего сайта, чтобы переиспользовать
+                       about_text -переименуй text -->
         <h3 class="about_text">Divide have don't man wherein air fourth. Own itself make have night won't make.
             A you under Seed appear which good give. Own give air without fowl moveth dry first
             heaven fruit, dominion she'd won't very all.
@@ -49,15 +67,18 @@
         <img src="img/podpis.png" alt="podpis"/>
     </section>
     <section class="bg_skills">
+        <!--  TODO: 2 <div лишние. Запихни container+skills в section?  -->
         <div class="container">
             <section class="skills">
                 <h2 class="skills_title">Professional Skills</h2>
                 <div class="skills_item">
                     <h3 class="skills_text">ui/ux design 75%</h3>
+                    <!--  TODO: пустой div - заменить на span? -->
                     <div class="skills_line_ui"></div>
                 </div>
                 <div class="skills_item">
                     <h3 class="skills_text">Web development 90%</h3>
+                    <!--  TODO: пустой div - заменить на span здесь и далее? -->
                     <div class="skills_line_web"></div>
                 </div>
                 <div class="skills_item">
@@ -68,6 +89,7 @@
         </div>
     </section>
     <section class="number">
+        <!--  TODO: <div лишние.  -->
         <div class="container">
             <div class="numbers_items">
                 <div class="numbers_item">
@@ -94,6 +116,7 @@
         </div>
     </section>
     <section class="work">
+        <!--  TODO: <div лишние.  -->
         <div class="work_imgs">
             <div class="work_img1">
                 <i class="work_icon_eye1 far fa-eye"></i>
@@ -108,7 +131,9 @@
                 <i class="work_icon_eye4 far fa-eye"></i>
             </div>
         </div>
-        <div class="load_more"><h4 class="load_more_text">load more work</h4></div>
+        <div class="load_more">
+            <h4 class="load_more_text">load more work</h4>
+        </div>
 
     </section>
     <section class="work_process">
@@ -129,6 +154,8 @@
             <div class="services_items">
                 <div class="services_item">
                     <i class="services_icon far fa-gem"></i>
+                    <!--TODO: сделать класс title не только для баннера, а для всего сайта, чтобы переиспользовать
+                              здесь, выше и ниже -->
                     <h3 class="services_title">ui / ux design</h3>
                     <h4 class="services_text">Be set fourth land god darkness make it wherein own</h4>
                 </div>
@@ -191,6 +218,8 @@
         </div>
     </section>
     <section class="need_a_project">
+        <!--TODO: сделать класс title не только для баннера, а для всего сайта, чтобы переиспользовать
+             about_title -переименуй title -->
         <h2 class="about_title">Need a Project?</h2>
         <h3 class="about_text">Let us know what you're looking for in an agency. We'll take a look and see<br>
             if this could be the start of something beautiful.
