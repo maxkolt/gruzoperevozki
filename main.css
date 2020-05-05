@@ -13,10 +13,9 @@ body{
 #header {
     position: relative; /* Задаём блоку относительное позиционирование для того, чтобы затем размещать, в нём другие элементы и позиционировать относительно его границ поверх фоновой картинки и заголовка */
     height: 250px; /* Высота шапки */
-
     margin-bottom: 5px; /* Нижний отступ шапки от остального контента */
     border-radius: 5px; /* Закругляются углы блока */
-    box-shadow: rgba(95, 106, 130, 0.4) 0px 5px 5px 6px; /* Тень. Визуально приподнимает блок над оболочкой */
+    box-shadow: rgba(95, 106, 130, 0.4) 0 5px 5px 6px; /* Тень. Визуально приподнимает блок над оболочкой */
 }
 img{ /* Фоновая картинка в шапке */
     float: left; /* Разрешаем наплывание других элементов на картинку */
@@ -63,8 +62,10 @@ h1 { /* Заголовок сайта */
     padding: 10px; /* Отступ текста от краёв */
     float: right; /* Размещаем блок справа от других элементов, наплывание или обтекание справа). Если делать сайдбар слева, то значение right меняем на left */
     border-radius: 5px; /* Закругляем углы блока */
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 3px; /* Задаём блоку тень */
-    height: 594px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px; /* Задаём блоку тень */
+    min-height: 588px;
+    /* Ширина статьи */
+
 }
 .offer {
     text-align: center;
@@ -78,13 +79,15 @@ h1 { /* Заголовок сайта */
 /* Контент (статья) */
 
 #content { /* Блок контента */
+
     margin-bottom: 5px; /* Отступ блока статьи от блока подвала */
-    width: 676px; /* Ширина статьи */
+    width: 676px;
     padding: 10px; /* Отступ текста от краёв блока */
     background: #ffffff; /* Фон статьи */
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 3px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
 }
+
 
 .lefti { /* Картинка в тексте слева */
     float: left;
@@ -105,25 +108,33 @@ h1 { /* Заголовок сайта */
     background-color: #d0d8f1; /* Фон блока подвала */
     margin-bottom: 10px; /* Отступ снизу */
     border-radius: 5px; /* Закруглённые углы */
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 3px; /* Тень блока */
+    box-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px; /* Тень блока */
 }
 
 .clear { /* Запрет наплывания. Устанавливается для того, чтобы блок контента, при заполнении текстом и изображениями не наплывал на подвал */
     clear: both;
 }
-.fon{ /* Номер телефона */
-    float:left; /* Разрешаем другим элементам обтекать абзац справа */
-    margin:20px 0 0 20px;
+.fon { /* Номер телефона */
+    text-align: center;
+    font-size: 18px;
+    float: left; /* Разрешаем другим элементам обтекать абзац справа */
+    margin: 20px 0 0 20px;
 }
 
 .fax { /* Номер факса */
+    font-size: 14px;
+    text-align: center;
+    color: grey;
     float: left;
-    margin: 20px 0 0 60px;
+    margin: 28px 0 0 35px;
 }
 
 .mail { /* Адрес E-mail */
+    font-size: 14px;
+    text-align: center;
+    color: grey;
     float: left;
-    margin: 20px 0 0 60px;
+    margin: 28px 0 0 45px;
 }
 
 .park {
@@ -132,6 +143,9 @@ h1 { /* Заголовок сайта */
     color: #7e7ecd;
 }
 
+.pay {
+    text-align: center;
+}
 
 .wrap {
     margin-left: 10px;
@@ -140,7 +154,7 @@ h1 { /* Заголовок сайта */
     perspective: 500px;
     -webkit-perspective-origin: 50% 50%;
     -ms-perspective-origin: 50% 50%;
-    perspective-origin: 50% 50%;
+    perspective-origin: 50% 70%;
     float: left;
     margin-right: 100px;
     color: #7e76b4;
@@ -159,20 +173,21 @@ h1 { /* Заголовок сайта */
 .face {
     display: block;
     position: absolute;
-    top: 0;
+    top: 25px;
     left: 0;
     width: 70px;
     height: 70px;
     padding: 5px 3px;
     color: #1F0405;
-    font-size: 16px;
+    font-size: 15px;
     text-align: center;
-    line-height: 70px;
-    border-radius: 4px;
+    line-height: 25px;
+    border-radius: 1px;
     box-shadow: inset 0 0 0 2px #705E5F;
 }
 
 .front {
+    padding-top: 20px;
     -webkit-transform: translateZ(38px);
     -ms-transform: translateZ(38px);
     transform: translateZ(38px);
@@ -180,6 +195,7 @@ h1 { /* Заголовок сайта */
 }
 
 .back {
+    padding-top: 20px;
     -webkit-transform: translateZ(-38px) rotateY(-180deg);
     -ms-transform: translateZ(-38px) rotateY(-180deg);
     transform: translateZ(-38px) rotateY(-180deg);
@@ -187,6 +203,10 @@ h1 { /* Заголовок сайта */
 }
 
 .left {
+    margin-top: 15px;
+    font-size: 13px;
+    padding-top: 13px;
+    padding-bottom: 12px;
     -webkit-transform: translateX(-38px) rotateY(-90deg);
     -ms-transform: translateX(-38px) rotateY(-90deg);
     transform: translateX(-38px) rotateY(-90deg);
@@ -194,6 +214,7 @@ h1 { /* Заголовок сайта */
 }
 
 .rght {
+    padding-top: 20px;
     -webkit-transform: translateX(38px) rotateY(90deg);
     -ms-transform: translateX(38px) rotateY(90deg);
     transform: translateX(38px) rotateY(90deg);
@@ -239,23 +260,21 @@ h1 { /* Заголовок сайта */
     /*Размер и рамка блока*/
     width: 400px;
     height: 200px;
-   /* border: 2px solid #f3dfa4; */
     border-radius: 5px;
     margin-left: 172px;
 }
-/* Групповой селектор для 7-ми картинок */
+
+/* Групповой селектор для 5-и картинок */
 .image1,
 .image2,
 .image3,
 .image4,
-.image5,
-.image6,
-.image7 {
+.image5 {
     /* Позиционируем абсолютно относительно блока */
     position: absolute;
     top: 40px;
     /* Делаем их полностью прозрачными */
-    opacity: 2%;
+    opacity: 1%;
     width: 400px;
     height: 200px;
 }
@@ -265,23 +284,20 @@ h1 { /* Заголовок сайта */
 }
 /* Анимация последующих картинок выполняется с задержкой начала необходимой для прокрутки предыдущих изображений */
 .image2 {
-    animation: two-image 8s 5s ease alternate;
+    animation: two-image 6s 4s ease alternate;
 }
 .image3 {
-    animation: three-image 8s 10s ease alternate;
+    animation: three-image 6s 9s ease alternate;
 }
 .image4 {
-    animation: four-image 8s 14s ease alternate;
+    animation: four-image 6s 13s ease alternate;
 }
 .image5 {
-    animation: five-image 8s 18s ease alternate;
-}
-.image6 {
-    animation: six-image 8s 22s ease alternate;
+    animation: five-image 4s 17s ease alternate;
 }
 
 /* Последняя картинка не прозрачная остаётся видной после прокрутки */
-.image7 {
+.image0 {
     position: absolute;
     top: 40px;
     width: 400px;
@@ -292,7 +308,7 @@ h1 { /* Заголовок сайта */
 @keyframes one-image{
     /* Задаём изменение прозрачности. Здесь можно добавить вращение, перемещение из-за границ блока или появление из центра (масштабирование) */
     0% {
-        opacity: 1;
+        opacity: 0;
     }
     50% {
         opacity: 1;
@@ -338,54 +354,22 @@ h1 { /* Заголовок сайта */
     }
 }
 
-@keyframes five-image{
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
 
-@keyframes six-image{
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes seven-image{
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-/* Анимация для восьмой картинки */
-@keyframes eight-image{
+/* Анимация для пятой картинки */
+@keyframes five-image {
     /* остаётся прозрачной пока не прокрутятся предыдущие */
     0% {
         opacity: 0;
     }
     87% {
-        opacity: 0;
+        opacity: 1;
     }
     /*Становиться видимой в конце работы слайдера */
     100% {
         opacity: 1;
     }
+
+
 }
 .button {
     border-radius: 50px;
@@ -393,3 +377,5 @@ h1 { /* Заголовок сайта */
 input[type="button"]:focus {
     outline: none;
 }
+
+
