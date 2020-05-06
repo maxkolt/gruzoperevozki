@@ -18,7 +18,8 @@ body{
     border-radius: 5px; /* Закругляются углы блока */
     box-shadow: rgba(95, 106, 130, 0.4) 0 5px 5px 6px; /* Тень. Визуально приподнимает блок над оболочкой */
 }
-img{ /* Фоновая картинка в шапке */
+.logo{ /* Фоновая картинка в шапке */
+
     margin: -40px;
 } /* Размещаем картинку в блоке header. 1-я и 3-я цифры - двигаем вверх-вниз, 2-я и 4-я цифры - двигаем вправо-влево */
 
@@ -49,10 +50,11 @@ img{ /* Фоновая картинка в шапке */
 }
 
 .page {
+
     float: right;
     border: 3px;
     margin-right: 5px;
-    margin-top: 45px;
+    margin-top: 50px;
     height: 226px;
     width: 340px;
 }
@@ -98,8 +100,7 @@ img{ /* Фоновая картинка в шапке */
 }
 
 .content p {
-
-    padding-top: 16px;
+   margin-top: 16px;
 
 }
 
@@ -144,7 +145,7 @@ img{ /* Фоновая картинка в шапке */
 }
 
 .park {
-    padding-bottom: 20px;
+    margin-bottom: unset;
     text-align: center;
     padding-top: 45px;
     color: #7e7ecd;
@@ -381,7 +382,7 @@ img{ /* Фоновая картинка в шапке */
 }
 .button {
     border-radius: 50px;
-    margin-top: 15px;
+    margin-top: 70px;
 }
 input[type="button"]:focus {
     outline: none;
