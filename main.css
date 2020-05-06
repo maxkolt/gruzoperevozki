@@ -1,12 +1,9 @@
 body{
     background: #ffffff; /* Меняется фон экрана, выбирается здесь */
-    width: 100%;
-    height: auto;
 }
 
 #wrapper{ /* Оболочка страницы сайта */
-    width: 990px; /* Меняется ширина страницы */
-    height: 100%;
+
     margin: 0 auto;
     background: #eae3cc; /* Меняется задний фон страницы */
 }
