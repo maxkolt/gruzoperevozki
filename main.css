@@ -3,7 +3,7 @@ body{
 }
 
 #wrapper{ /* Оболочка страницы сайта */
-    width: 1000px; /* Меняется ширина страницы */
+    width: 990px; /* Меняется ширина страницы */
     height: 100%;
     margin: 100px auto;
     background: #eae3cc; /* Меняется задний фон страницы */
@@ -19,12 +19,14 @@ body{
     box-shadow: rgba(95, 106, 130, 0.4) 0 5px 5px 6px; /* Тень. Визуально приподнимает блок над оболочкой */
 }
 img{ /* Фоновая картинка в шапке */
-    float: left; /* Разрешаем наплывание других элементов на картинку */
-    margin: -40px 0 0 0;} /* Размещаем картинку в блоке header. 1-я и 3-я цифры - двигаем вверх-вниз, 2-я и 4-я цифры - двигаем вправо-влево */
-h1 { /* Заголовок сайта */
-    margin: 0 0 10px 85px; /* Заголовок двигается верх-вправо-вниз-влево. */
+    margin: -40px;
+} /* Размещаем картинку в блоке header. 1-я и 3-я цифры - двигаем вверх-вниз, 2-я и 4-я цифры - двигаем вправо-влево */
+
+.logo1 { /* Заголовок сайта */
+    margin: 0 0 10px 120px; /* Заголовок двигается верх-вправо-вниз-влево. */
     color: red; /* Цвет заголовка */
     font-size: 30px;
+    position: inherit;
 }
 
 .nomer { /*Подзаголовок (номер телефона)*/
@@ -36,21 +38,27 @@ h1 { /* Заголовок сайта */
     font-weight: bold; /* Жирный */
     color: black; /* Цвет букв подзаголовка */
 }
+.info {
+    margin-top: 60px;
+}
 
 .logo {
     height: 242px;
-    width: 990px;
+    width: 979px;
     margin-left: 5px;
 }
 
 .page {
-    margin-right: 15px;
-    margin-top: 20px;
+    float: right;
+    border: 3px;
+    margin-right: 5px;
+    margin-top: 45px;
     height: 226px;
     width: 340px;
 }
 
 .center {
+    margin-top: 20px;
     text-align: center;
     color: gray;
 }
@@ -60,12 +68,12 @@ h1 { /* Заголовок сайта */
 .sidebar { /* Блок сайдбара */
     text-align: center;
     background-color: #e2caf5; /* Фон блока */
-    width: 280px; /* Ширина блока */
+    width: 271px; /* Ширина блока */
     padding: 10px; /* Отступ текста от краёв */
     float: right; /* Размещаем блок справа от других элементов, наплывание или обтекание справа). Если делать сайдбар слева, то значение right меняем на left */
     border-radius: 5px; /* Закругляем углы блока */
     box-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px; /* Задаём блоку тень */
-    min-height: 588px;
+    min-height: 716px;
     /* Ширина статьи */
 
 }
@@ -89,16 +97,12 @@ h1 { /* Заголовок сайта */
     box-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
 }
 
+.content p {
 
-.lefti { /* Картинка в тексте слева */
-    float: left;
-    margin: 30px 7px 7px 7px
+    padding-top: 16px;
+
 }
 
-.right{ /* Картинка в тексте справа */
-    float: right;
-    margin: 7px 0 7px 7px;
-}
 /* Подвал */
 
 #footer { /* Блок подвала */
@@ -115,6 +119,7 @@ h1 { /* Заголовок сайта */
 .clear { /* Запрет наплывания. Устанавливается для того, чтобы блок контента, при заполнении текстом и изображениями не наплывал на подвал */
     clear: both;
 }
+
 .fon { /* Номер телефона */
     text-align: center;
     font-size: 18px;
@@ -139,12 +144,14 @@ h1 { /* Заголовок сайта */
 }
 
 .park {
+    padding-bottom: 20px;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 45px;
     color: #7e7ecd;
 }
 
 .pay {
+    margin-top: 50px;
     text-align: center;
 }
 
@@ -155,7 +162,7 @@ h1 { /* Заголовок сайта */
     perspective: 500px;
     -webkit-perspective-origin: 50% 50%;
     -ms-perspective-origin: 50% 50%;
-    perspective-origin: 50% 70%;
+    perspective-origin: 70% 70%;
     float: left;
     margin-right: 100px;
     color: #7e76b4;
@@ -374,6 +381,7 @@ h1 { /* Заголовок сайта */
 }
 .button {
     border-radius: 50px;
+    margin-top: 15px;
 }
 input[type="button"]:focus {
     outline: none;
