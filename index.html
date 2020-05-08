@@ -2,20 +2,29 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Перевезу.by</title>
 </head>
 <body>
-<div id="wrapper"> <!--Оболочка страницы-->
-    <!--Шапка сайта-->
-    <div id="header">
-        <!--Заголовок сайта-->
-        <h1 class="logo1">Грузоперевозки</h1>
-        <!--Описание (телефон)-->
-        <p class="nomer">ЗВОНИТЕ: <br>+375(29) 955 66 99</p>
-        <!--Фоновая картинка в шапке сайта-->
-        <img class="logo" src="img/banner.jpg"/>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <p class="font"><a class="chek" href="#">Главня</a></p>
+        </div>
+        <div class="col-6">
+            <h1 class="logo1">Грузоперевозки<br/>
+                <p class="telo"><img src="img/Phone_43546 (2).png" height="48" width="48"/>+375 (29) 566 99 55</p>
+            </h1>
+        </div>
+        <div class="col">
+            <p class="font"><a class="chek" href="#">Контакты</a></p>
+        </div>
     </div>
+
+
     <!--Сайдбар-->
     <div class="sidebar">
         <!--меню-->
@@ -78,6 +87,29 @@
     </div>
 </div>
 </div>
+<footer>
+    <div id="footer-nav">
+        <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Меню</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Заказ Онлайн</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+    </div>
+    <div id="footer-social-links">
+        <ul>
+            <li><a href="#"><i class="icon ion-logo-facebook"></i></a></li>
+            <li><a href="#"><i class="icon ion-logo-instagram"></i></a></li>
+            <li><a href="#"><i class="icon ion-logo-youtube"></i></a></li>
+            <li><a href="#"><i class="icon ion-logo-twitter"></i></a></li>
+        </ul>
+    </div>
+    <div id="footer-text">
+        <p>Все права защищены &copy;</p>
+        <p>Возрастные ограничения 0+</p>
+    </div>
+</footer>
 </body>
 <script>
     var CLN; onload = function () {CLN = document.getElementById ('slaid').cloneNode (3)}

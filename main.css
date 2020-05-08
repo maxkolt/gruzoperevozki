@@ -1,105 +1,39 @@
-body{
-    background: #ffffff; /* Меняется фон экрана, выбирается здесь */
+.row,.col,.col-6 {
+    border: 1px solid black;
 }
-
-#wrapper{ /* Оболочка страницы сайта */
-    width: 990px; /* Меняется ширина страницы */
-    margin: 0 auto;
-    background: #eae3cc; /* Меняется задний фон страницы */
-}
-
-/* Шапка сайта */
-
-#header {
-    position: relative; /* Задаём блоку относительное позиционирование для того, чтобы затем размещать, в нём другие элементы и позиционировать относительно его границ поверх фоновой картинки и заголовка */
-    height: 250px; /* Высота шапки */
-    margin-bottom: 5px; /* Нижний отступ шапки от остального контента */
-    border-radius: 5px; /* Закругляются углы блока */
-    box-shadow: rgba(95, 106, 130, 0.4) 0 5px 5px 6px; /* Тень. Визуально приподнимает блок над оболочкой */
-}
-.logo{ /* Фоновая картинка в шапке */
-
-    margin: -40px;
-} /* Размещаем картинку в блоке header. 1-я и 3-я цифры - двигаем вверх-вниз, 2-я и 4-я цифры - двигаем вправо-влево */
 
 .logo1 { /* Заголовок сайта */
-    margin: 0 0 10px 100px; /* Заголовок двигается верх-вправо-вниз-влево. */
+    margin: 0 0 0 0; /* Заголовок двигается верх-вправо-вниз-влево. */
     color: red; /* Цвет заголовка */
     font-size: 30px;
-    position: inherit;
-}
-
-.nomer { /*Подзаголовок (номер телефона)*/
-    position: absolute; /* Позиционируем абсолютно подзаголовок, относительно границ блока header. Также можно разместить в шапке сайта ещё другие картинки и абзацы поверх фоновой картинки и заголовка */
-    top: -25px; /* Двигается вверх-вниз */
-    left: 465px; /* Двигается вправо-влево */
-    font-size: 28px; /* Размер букв подзаголовка */
-    font-style: italic; /* Курсив */
-    font-weight: bold; /* Жирный */
-    color: black; /* Цвет букв подзаголовка */
-}
-.info {
-    margin-top: 100px;
-}
-
-.logo {
-    height: 242px;
-    width: 979px;
-    margin-left: 5px;
-}
-
-.page {
-
-    float: right;
-    border: 3px;
-    margin-right: 5px;
-    margin-top: 50px;
-    height: 226px;
-    width: 340px;
-}
-
-.center {
-    margin-top: 20px;
-    text-align: center;
-    color: gray;
-}
-
-/* Сайдбар (колонка справа) */
-
-.sidebar { /* Блок сайдбара */
-    display: inline-block;
-    text-align: center;
-    background-color: #e2caf5; /* Фон блока */
-    width: 271px; /* Ширина блока */
-    padding: 10px; /* Отступ текста от краёв */
-    float: right; /* Размещаем блок справа от других элементов, наплывание или обтекание справа). Если делать сайдбар слева, то значение right меняем на left */
-    border-radius: 5px; /* Закругляем углы блока */
-    box-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px; /* Задаём блоку тень */
-    height: 717px;
-    /* Ширина статьи */
-
-}
-.offer {
     text-align: center;
 }
 
-.marcer { /* Галочки маркеры меню */
-    float: none;
-    margin: 5px 3px 0 0; /* Двигаются вверх-вправо-вниз-влево */
+.col {
+    text-align: center;
 }
 
-/* Контент (статья) */
-
-.content { /* Блок контента */
-    margin-bottom: 5px; /* Отступ блока статьи от блока подвала */
-    width: 676px;
-    padding: 10px; /* Отступ текста от краёв блока */
-    background: #ffffff; /* Фон статьи */
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px;
+img {
+    margin: 0 0 0 5px;
 }
 
-/* Подвал */
+.telo {
+    margin-right: 30px;
+    font-size: 20px;
+}
+
+.font {
+    padding-top: 35px;
+    color: darkblue;
+    font-size: 20px;
+}
+.chek:hover {
+   text-decoration: none;
+    color: darkblue;
+}
+
+
+
 
 #footer { /* Блок подвала */
     padding-right: 40px;
@@ -139,245 +73,110 @@ body{
     margin: 28px 0 0 45px;
 }
 
-.park {
-    margin-bottom: unset;
+
+footer {
     text-align: center;
-    padding-top: 45px;
-    color: #7e7ecd;
+    padding: 100px 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(10, 33, 237, 1)));
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 1), rgba(10, 33, 237, 1));
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 1), rgba(10, 33, 237, 1));
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(10, 33, 237, 1));
+    color: #81E0FD;
 }
 
-.pay {
-    margin-top: 50px;
-    text-align: center;
+footer p {
+    font-size: 90%;
 }
 
-.wrap {
-    margin-left: 67px;
-    -webkit-perspective: 500px;
-    -ms-perspective: 500px;
-    perspective: 500px;
-    -webkit-perspective-origin: 50% 50%;
-    -ms-perspective-origin: 50% 50%;
-    perspective-origin: 70% 70%;
-    float: left;
-    margin-right: 100px;
-    color: #7e76b4;
+#footer-social-links {
+    list-style: none;
+    margin-left: 30px;
+    margin-bottom: 20px;
 }
 
-.cube {
-    margin: 17px;
-    width: 70px;
-    height: 70px;
-    -webkit-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-    transform-style: preserve-3d;
+#footer-social-links li {
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 0.8em;
 }
 
-.face {
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 70px;
-    height: 70px;
-    padding: 5px 3px;
-    color: #1F0405;
-    font-size: 12px;
-    line-height: 25px;
-    border-radius: 1px;
-    box-shadow: inset 0 0 0 2px #705E5F;
+#footer-nav {
+    margin-bottom: 20px;
 }
 
-.front {
-    padding-top: 20px;
-    -webkit-transform: translateZ(38px);
-    -ms-transform: translateZ(38px);
-    transform: translateZ(38px);
-    background: #fff;
+#footer-nav ul {
+    list-style: none;
 }
 
-.back {
-    padding-top: 20px;
-    -webkit-transform: translateZ(-38px) rotateY(-180deg);
-    -ms-transform: translateZ(-38px) rotateY(-180deg);
-    transform: translateZ(-38px) rotateY(-180deg);
-    background: #fff;
+#footer-nav li a:link,
+#footer-nav li a:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #81E0FD;
+    opacity: 0.5;
+    font-size: 70%;
 }
 
-.left {
-    margin-top: 12px;
-    font-size: 12px;
-    padding-top: 13px;
-    padding-bottom: 12px;
-    -webkit-transform: translateX(-38px) rotateY(-90deg);
-    -ms-transform: translateX(-38px) rotateY(-90deg);
-    transform: translateX(-38px) rotateY(-90deg);
-    background: #fff;
+#footer-nav li a:hover,
+#footer-nav li a:active {
+    opacity: 1;
 }
 
-.rght {
-    padding-top: 20px;
-    -webkit-transform: translateX(38px) rotateY(90deg);
-    -ms-transform: translateX(38px) rotateY(90deg);
-    transform: translateX(38px) rotateY(90deg);
-    background: #fff;
+#footer-social-links li a:link,
+#footer-social-links li a:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #81E0FD;
+    opacity: 0.5;
+    font-size: 150%;
 }
 
-.rotate-y {
-    -webkit-animation: spinY 10s infinite linear;
-    -ms-animation: spinY 10s infinite linear;
-    animation: spinY 10s infinite linear;
-}
-
-@-webkit-keyframes spinY {
-    from {
-        -webkit-transform: rotateY(0);
-        -ms-transform: rotateY(0);
-        transform: rotateY(0);
-    }
-    to {
-        -webkit-transform: rotateY(360deg);
-        -ms-transform: rotateY(360deg);
-        transform: rotateY(360deg);
-    }
-}
-
-@keyframes spinY {
-    from {
-        -webkit-transform: rotateY(0);
-        -ms-transform: rotateY(0);
-        transform: rotateY(0);
-    }
-    to {
-        -webkit-transform: rotateY(360deg);
-        -ms-transform: rotateY(360deg);
-        transform: rotateY(360deg);
-    }
-}
-
-/* Блок слайдера */
-#slaid {
-    /* Задаём относительное позиционирование */
-    position: relative;
-    /*Размер и рамка блока*/
-    width: 400px;
-    height: 200px;
-    border-radius: 5px;
-    margin-left: 172px;
-}
-
-/* Групповой селектор для 5-и картинок */
-.image1,
-.image2,
-.image3,
-.image4,
-.image5 {
-    /* Позиционируем абсолютно относительно блока */
-    position: absolute;
-    top: 40px;
-    /* Делаем их полностью прозрачными */
-    opacity: 1%;
-    width: 400px;
-    height: 200px;
-}
-/* Подключаем анимацию к первой картинке */
-.image1{
-    animation: one-image 5s 1s ease alternate;
-}
-/* Анимация последующих картинок выполняется с задержкой начала необходимой для прокрутки предыдущих изображений */
-.image2 {
-    animation: two-image 6s 4s ease alternate;
-}
-.image3 {
-    animation: three-image 6s 9s ease alternate;
-}
-.image4 {
-    animation: four-image 6s 13s ease alternate;
-}
-.image5 {
-    animation: five-image 4s 17s ease alternate;
-}
-
-/* Последняя картинка не прозрачная остаётся видной после прокрутки */
-.image0 {
-    position: absolute;
-    top: 40px;
-    width: 400px;
-    height: 200px;
-    animation: eight-image 26s ease alternate;
-}
-/* Анимации для первой картинки */
-@keyframes one-image{
-    /* Задаём изменение прозрачности. Здесь можно добавить вращение, перемещение из-за границ блока или появление из центра (масштабирование) */
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-/* Анимация для следующих 6-и картинок */
-@keyframes two-image{
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes three-image{
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes four-image{
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+#footer-social-links li a:hover,
+#footer-social-links li a:active {
+    opacity: 1;
 }
 
 
-/* Анимация для пятой картинки */
-@keyframes five-image {
-    /* остаётся прозрачной пока не прокрутятся предыдущие */
-    0% {
-        opacity: 0;
-    }
-    87% {
-        opacity: 1;
-    }
-    /*Становиться видимой в конце работы слайдера */
-    100% {
-        opacity: 1;
+
+
+@media only screen and (max-width: 970px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
     }
 
+    .button-order {
+        margin-bottom: 20px;
+    }
+
+    #contact-form {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .mobile-nav-icon {
+        display: inline-block;
+    }
+
+    #main-nav {
+        float: right;
+        margin-top: 40px;
+        display: none;
+    }
+
+    #main-nav li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    #main-nav li a:link,
+    #main-nav li a:visited {
+        display: block;
+    }
+
+    #sticky-nav #main-nav li a:hover,
+    #sticky-nav #main-nav li a:active {
+        border-bottom: 0;
+    }
 
 }
-.button {
-    border-radius: 50px;
-    margin-top: 70px;
-}
-input[type="button"]:focus {
-    outline: none;
-}
-
-
