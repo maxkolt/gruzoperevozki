@@ -1460,7 +1460,7 @@ footer a {
 
 /* the icon with pseudo class for icon font */
 .cbp-ig-icon {
- padding: 40px 0 20px;
+ padding: 100px 0 20px;
  display: block;
  -webkit-transition: -webkit-transform 0.2s;
  transition: -moz-transform 0.2s;
