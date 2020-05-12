@@ -983,7 +983,7 @@ div.arrow {
 }
 
 .cbp-ig-grid .cbp-ig-title:before {
- content: '';
+
  position: absolute;
  background: #767E9E;
  width: 160px;
