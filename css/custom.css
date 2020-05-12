@@ -533,8 +533,13 @@ html[xmlns] .slides {
 
 .ser_wrap_3 .wrap {
  float: left;
- margin: 0 0 10px 10px;
+ margin: 0 0 50px 13px;
  width: 79%;
+}
+
+.abaut {
+ text-align: center;
+ margin-bottom: 50px;
 }
 
 .ser_wrap_3.option2 ul li:hover .icon_ser {
