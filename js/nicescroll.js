@@ -15,7 +15,7 @@
   var mousefocus = false;
   var zoomactive = false;
   var tabindexcounter = 5000;
-  var ascrailcounter = 2000;
+
   var globalmaxzindex = 0;
   
   var $ = jQuery;  // sandbox
@@ -723,37 +723,37 @@
           'border-radius':self.opt.cursorborderradius
         });   
         
-        cursor.hborder = parseFloat(cursor.outerHeight() - cursor.innerHeight());        
-        self.cursor = cursor;        
-        
+        cursor.hborder = parseFloat(cursor.outerHeight() - cursor.innerHeight());
+        self.cursor = cursor;
+
         var rail = $(document.createElement('div'));
         rail.attr('id',self.id);
         rail.addClass('nicescroll-rails');
-        
+
         var v,a,kp = ["left","right"];  //"top","bottom"
         for(var n in kp) {
           a=kp[n];
           v = self.opt.railpadding[a];
           (v) ? rail.css("padding-"+a,v+"px") : self.opt.railpadding[a] = 0;
         }
-        
+
         rail.append(cursor);
-        
+
         rail.width = Math.max(parseFloat(self.opt.cursorwidth),cursor.outerWidth()) + self.opt.railpadding['left'] + self.opt.railpadding['right'];
-        rail.css({width:rail.width+"px",'zIndex':self.zindex,"background":self.opt.background,cursor:"default"});        
-        
+        rail.css({width:rail.width+"px",'zIndex':self.zindex,"background":self.opt.background,cursor:"default"});
+
         rail.visibility = true;
         rail.scrollable = true;
-        
+
         rail.align = (self.opt.railalign=="left") ? 0 : 1;
-        
+
         self.rail = rail;
-        
+
         self.rail.drag = false;
-        
+
         var zoom = false;
         if (self.opt.boxzoom&&!self.ispage&&!cap.isieold) {
-          zoom = document.createElement('div');          
+          zoom = document.createElement('div');
           self.bind(zoom,"click",self.doZoom);
           self.zoom = $(zoom);
           self.zoom.css({"cursor":"pointer",'z-index':self.zindex,'backgroundImage':'url('+scriptpath+'zoomico.png)','height':18,'width':18,'backgroundPosition':'0px 0px'});
@@ -764,10 +764,10 @@
               if (e.scale<0.8) self.doZoomOut(e);
               return self.cancelEvent(e);
             };
-            self.bind(self.win,"gestureend",self.ongesturezoom);             
+            self.bind(self.win,"gestureend",self.ongesturezoom);
           }
         }
-        
+
 // init HORIZ
 
         self.railh = false;
@@ -785,32 +785,32 @@
             '-webkit-border-radius':self.opt.cursorborderradius,
             '-moz-border-radius':self.opt.cursorborderradius,
             'border-radius':self.opt.cursorborderradius
-          });   
-          
+          });
+
           cursor.wborder = parseFloat(cursor.outerWidth() - cursor.innerWidth());
           self.cursorh = cursor;
-          
+
           var railh = $(document.createElement('div'));
           railh.attr('id',self.id+'-hr');
-          railh.addClass('nicescroll-rails');
+
           railh.height = Math.max(parseFloat(self.opt.cursorwidth),cursor.outerHeight());
           railh.css({height:railh.height+"px",'zIndex':self.zindex,"background":self.opt.background});
-          
+
           railh.append(cursor);
-          
+
           railh.visibility = true;
           railh.scrollable = true;
-          
+
           railh.align = (self.opt.railvalign=="top") ? 0 : 1;
-          
+
           self.railh = railh;
-          
+
           self.railh.drag = false;
-          
+
         }
-        
-//        
-        
+
+//
+
         if (self.ispage) {
           rail.css({position:"fixed",top:"0px",height:"100%"});
           (rail.align) ? rail.css({right:"0px"}) : rail.css({left:"0px"});
@@ -820,7 +820,7 @@
             (railh.align) ? railh.css({bottom:"0px"}) : railh.css({top:"0px"});
             self.body.append(railh);
           }
-        } else {          
+        } else {
           if (self.ishwscroll) {
             if (self.win.css('position')=='static') self.css(self.win,{'position':'relative'});
             var bd = (self.win[0].nodeName == 'HTML') ? self.body : self.win;
@@ -839,13 +839,13 @@
           } else {
             self.isfixed = (self.win.css("position")=="fixed");
             var rlpos = (self.isfixed) ? "fixed" : "absolute";
-            
+
             if (!self.isfixed) self.viewport = self.getViewport(self.win[0]);
             if (self.viewport) {
-              self.body = self.viewport;              
+              self.body = self.viewport;
               if ((/relative|absolute/.test(self.viewport.css("position")))==false) self.css(self.viewport,{"position":"relative"});
-            }            
-            
+            }
+
             rail.css({position:rlpos});
             if (self.zoom) self.zoom.css({position:rlpos});
             self.updateScrollBar();
@@ -853,24 +853,24 @@
             if (self.zoom) self.body.append(self.zoom);
             if (self.railh) {
               railh.css({position:rlpos});
-              self.body.append(railh);           
+              self.body.append(railh);
             }
           }
-          
+
           if (cap.isios) self.css(self.win,{'-webkit-tap-highlight-color':'rgba(0,0,0,0)','-webkit-touch-callout':'none'});  // prevent grey layer on click
-          
+
           if (cap.isie&&self.opt.disableoutline) self.win.attr("hideFocus","true");  // IE, prevent dotted rectangle on focused div
           if (cap.iswebkit&&self.opt.disableoutline) self.win.css({"outline":"none"});
-          
+
         }
-        
+
         if (self.opt.autohidemode===false) {
           self.autohidedom = false;
-          self.rail.css({opacity:self.opt.cursoropacitymax});          
+          self.rail.css({opacity:self.opt.cursoropacitymax});
           if (self.railh) self.railh.css({opacity:self.opt.cursoropacitymax});
         }
         else if (self.opt.autohidemode===true) {
-          self.autohidedom = $().add(self.rail);          
+          self.autohidedom = $().add(self.rail);
           if (cap.isie8) self.autohidedom=self.autohidedom.add(self.cursor);
           if (self.railh) self.autohidedom=self.autohidedom.add(self.railh);
           if (self.railh&&cap.isie8) self.autohidedom=self.autohidedom.add(self.cursorh);
@@ -888,10 +888,10 @@
           self.hide();
           self.locked = false;
         }
-        
+
         if (cap.isie9mobile) {
 
-          self.scrollmom = new ScrollMomentumClass2D(self);        
+          self.scrollmom = new ScrollMomentumClass2D(self);
 
           /*
           var trace = function(msg) {

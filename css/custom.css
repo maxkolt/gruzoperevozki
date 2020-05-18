@@ -121,7 +121,7 @@ h1 small {
             Header Area
 ============================================================= */
 .header {
- background-color: #EB5055
+ background-color: #f5f7f8
 }
 
 /**bootstrap over style for menu**/
@@ -501,9 +501,9 @@ html[xmlns] .slides {
 
 .ser_wrap_3 {
  border-bottom: 1px solid #EDEDED;
- margin: 0;
  overflow: hidden;
  padding: 20px 0;
+ margin-left: 20px;
 }
 
 .ser_wrap_3 ul {
@@ -533,8 +533,8 @@ html[xmlns] .slides {
 
 .ser_wrap_3 .wrap {
  float: left;
- margin: 0 0 50px 13px;
- width: 79%;
+ margin: 0 0 20px 15px;
+ width: 75%;
 }
 
 .abaut {
