@@ -243,7 +243,7 @@ h1 small {
 }
 
 .ha-header-small {
- padding: 0 0 0;
+ padding: 10px 0 7px;
 }
 
 .ha-header-small .navbar-nav > li > a {
@@ -709,11 +709,16 @@ html[xmlns] .slides {
 }
 
 #about .page-head small, #services .page-head small {
- color: #A3A7B9
+ color: #A3A7B9;
 }
 
-#about .page-head, #services .page-head {
- border-bottom: 1px solid #A3A7B9
+.add {
+ padding-top: 80px;
+}
+
+.page-head, #services .page-head {
+ border-bottom: 1px solid #A3A7B9;
+
 }
 
 .hexagon {
