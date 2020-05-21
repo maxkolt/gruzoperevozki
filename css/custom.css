@@ -213,7 +213,7 @@ h1 small {
 .ha-header {
  background-color: #3c4155;
  top: 0;
- left: 0;
+ left: -5px;
  position: fixed;
  right: 0;
  z-index: 1030;
