@@ -1,10 +1,6 @@
 /* ==========================================================
                        Global Styles
 ============================================================= */
-*{
- padding-left: 0; !important;
- padding-right: 0; !important;
-}
 
 @font-face {
  font-family: 'aller_lightregular';
@@ -213,7 +209,7 @@ h1 small {
 .ha-header {
  background-color: #3c4155;
  top: 0;
- left: -5px;
+ left: 0;
  position: fixed;
  right: 0;
  z-index: 1030;
