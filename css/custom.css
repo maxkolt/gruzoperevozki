@@ -1,6 +1,11 @@
 /* ==========================================================
                        Global Styles
 ============================================================= */
+*{
+ padding-left: 0; !important;
+ padding-right: 0; !important;
+}
+
 @font-face {
  font-family: 'aller_lightregular';
  src: url('aller_lt/aller_lt-webfont.eot');
