@@ -763,7 +763,7 @@ html[xmlns] .slides {
 
 .hexagon a img {
  position: absolute;
- left: 0;
+ left: -2px;
  top: 0;
  -webkit-transition: 300ms ease-out;
  -moz-transition: 300ms ease-out;
