@@ -583,9 +583,8 @@ html[xmlns] .slides {
 }
 
 .portfolio, .projects {
- background-color: #303441;
- border-bottom: 5px solid #4A4F5E;
- color: #767E9E;
+ background-color: #515b7b;
+ color: #c2cdfa;
  padding: 50px 0
 }
 
@@ -1110,16 +1109,15 @@ div.arrow {
 }
 
 #contact .page-head small {
- color: #BA383D
+ color: #ce5c60
 }
 
 #contact .page-head {
- border-bottom: 1px solid #BA383D
+ border-bottom: 1px solid #dc252c
 }
 
 .contact {
- background-color: #EB5055;
- border-bottom: 5px solid #F76A6E;
+ background-color: #a75962;
  padding: 50px;
  font-size: .9em;
  color: #F0D8D9;
@@ -1132,7 +1130,7 @@ div.arrow {
 }
 
 .contact a:hover {
- color: #7A191C
+ color: #d0363b
 }
 
 #map {
@@ -1243,7 +1241,7 @@ label {
 }
 
 .form-control {
- background-color: #BA383D;
+ background-color: #d9696d;
  color: #F0D8D9;
  border: none;
  border-radius: 0 0 0 0;
@@ -1299,7 +1297,6 @@ label {
 ============================================================= */
 footer {
  background-color: #303441;
- border-bottom: 5px solid #4A4F5E;
  color: #EB5055;
  padding: 25px 0 10px
 }
