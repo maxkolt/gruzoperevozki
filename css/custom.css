@@ -1296,6 +1296,7 @@ label {
                 Footer
 ============================================================= */
 footer {
+    margin-bottom: 15px;
     background-color: #303441;
     color: #EB5055;
     padding: 25px 0 10px
