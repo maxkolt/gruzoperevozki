@@ -79,6 +79,7 @@ ul {
                   TitleSection 
 ============================================================= */
 .TitleSection {
+    margin-top: 20px;
     margin-bottom: 40px;
     padding: 0;
     width: 100%
@@ -1290,6 +1291,10 @@ label {
     background-color: #4A4F5E;
     color: #AFB6D1;
     outline: none;
+}
+.warning {
+    text-align: center;
+    margin-top: -16px;
 }
 
 /* ==========================================================
